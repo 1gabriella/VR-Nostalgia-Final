@@ -280,11 +280,7 @@
    "source": [
     "import pandas as pd\n",
     "\n",
-<<<<<<< HEAD
-    "# data with differnt lengths\n",
-=======
     "# Your data dictionary with lists of different lengths:\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "data = {\n",
     "    \"age\": [25, 47, 20, 19, 23, 20, 21, 24, 23, 19, 20, 29, 21, 55, 22, 22, 21, 20, 30, 20, 30, 22, 22, 29, 22, 19, 28, 21],\n",
     "    \"occupation\": [\n",
@@ -352,22 +348,14 @@
     "        \"Yes, the 80's and 90's. I've never really progressed culturally past 2000\"\n",
     "    ],\n",
     "    \"impressionist_feelings[]\": [\n",
-<<<<<<< HEAD
-    "\n",
-=======
     "        # Assuming 23 items; I'll use placeholder text for demonstration.\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "        \"Strongly Agree\", \"Neutral\", \"Agree\", \"Neutral\", \"Disagree\", \"Strongly Agree\",\n",
     "        \"Neutral\", \"Agree\", \"Disagree\", \"Strongly Agree\", \"Neutral\", \"Agree\",\n",
     "        \"Neutral\", \"Disagree\", \"Strongly Agree\", \"Neutral\", \"Agree\", \"Neutral\",\n",
     "        \"Disagree\", \"Strongly Agree\", \"Neutral\", \"Agree\", \"Disagree\"\n",
     "    ],\n",
     "    \"romanticize_or_sad[]\": [\n",
-<<<<<<< HEAD
-    "     \n",
-=======
     "        # 22 items; placeholder text or your actual strings.\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "        \"Romanticize\", \"Romanticize\", \"Romanticize\", \"Romanticize\", \"I feel sad because I didn’t have a good childhood\",\n",
     "        \"Both\", \"Both\", \"I romanticize the past\", \"Longing\", \"Sadness and longing\",\n",
     "        \"Romanticize\", \"Longing\", \"sense of sadness\", \"I don’t really like romanticising my past\",\n",
@@ -381,11 +369,7 @@
     "        \"Longing\", \"Familiarity\", \"Familiarity\", \"Neither\", \"Familiarity\", \"Both\", \"Familiarity\", \"Familiarity\"\n",
     "    ],\n",
     "    \"project_imagery_reminder[]\": [\n",
-<<<<<<< HEAD
-    "     \n",
-=======
     "        # 23 items; I'll use placeholders.\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "        \"Internet\", \"It makes me want to be a kid again\", \"Playing computer dress up games\",\n",
     "        \"Reminds me of Alice in Wonderland and childhood toys\", \"Reminds me of Rachel Maclean\",\n",
     "        \"Primary school art project memories\", \"It's playful\", \"Nah\", \"Reminds me of my little sister\",\n",
@@ -396,21 +380,13 @@
     "        \"Reminds me of childhood relationships\"\n",
     "    ],\n",
     "    \"different_time\": [\n",
-<<<<<<< HEAD
-    "\n",
-=======
     "        # 23 items; placeholders.\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "        \"no\", \"no\", \"60s-70s\", \"no\", \"90s\", \"no\", \"00s\", \"before phones\", \"no\", \"like jesus\",\n",
     "        \"no\", \"no\", \"90s\", \"yes\", \"before phones\", \"no\", \"no\", \"sometimes\", \"no\", \"yes\",\n",
     "        \"yes\", \"yes\", \"before phones\"\n",
     "    ],\n",
     "    \"visual_elements\": [\n",
-<<<<<<< HEAD
-    " \n",
-=======
     "        # 23 items; placeholders.\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "        \"Searose\", \"Paul Delvaux and Giorgio de Chirico\", \"Moody lighting, old furniture, trees drawn like a child\",\n",
     "        \"Juxtaposition of smooth and real elements\", \"Empty backgrounds feel like memories\",\n",
     "        \"textures\", \"3D and 2D elements clash\", \"The playground lighting is nostalgic\",\n",
@@ -421,30 +397,18 @@
     "    ]\n",
     "}\n",
     "\n",
-<<<<<<< HEAD
-    "#  maximum length among all lists.\n",
-    "max_len = max(len(lst) for lst in data.values())\n",
-    "print(\"Maximum length:\", max_len)\n",
-    "\n",
-    "# cleaning data with n/a\n",
-=======
     "# Find the maximum length among all lists.\n",
     "max_len = max(len(lst) for lst in data.values())\n",
     "print(\"Maximum length:\", max_len)\n",
     "\n",
     "# Extend any list that is shorter than max_len with \"N/A\".\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "for key, lst in data.items():\n",
     "    if len(lst) < max_len:\n",
     "        missing = max_len - len(lst)\n",
     "        lst.extend([\"N/A\"] * missing)\n",
     "        print(f\"Extended '{key}' by {missing} items.\")\n",
     "\n",
-<<<<<<< HEAD
-    "#  create the DataFrame\n",
-=======
     "# Now create the DataFrame\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "df = pd.DataFrame(data)\n",
     "print(df)\n"
    ]
@@ -470,18 +434,6 @@
     "import matplotlib.pyplot as plt\n",
     "import pandas as pd\n",
     "\n",
-<<<<<<< HEAD
-    "# Convert 'age' to numeric\n",
-    "df[\"age_numeric\"] = pd.to_numeric(df[\"age\"], errors=\"coerce\")\n",
-    "\n",
-    "#  Filter out rows \n",
-    "df_clean = df.dropna(subset=[\"age_numeric\", \"different_time\"]).copy()\n",
-    "\n",
-    "counts = df_clean.groupby(\"different_time\").size()\n",
-    "avg_age = df_clean.groupby(\"different_time\")[\"age_numeric\"].mean()\n",
-    "\n",
-    "\n",
-=======
     "# 1. Convert 'age' to numeric\n",
     "df[\"age_numeric\"] = pd.to_numeric(df[\"age\"], errors=\"coerce\")\n",
     "\n",
@@ -496,7 +448,6 @@
     "\n",
     "# 4. Optional: define a custom order for the x-axis categories\n",
     "#    (Adjust this list to match your actual categories)\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "category_order = [\n",
     "    \"no\", \n",
     "    \"sometimes\", \n",
@@ -508,14 +459,6 @@
     "    \"like jesus\"\n",
     "]\n",
     "\n",
-<<<<<<< HEAD
-    "\n",
-    "\n",
-    "# Plot with dual y-axes\n",
-    "fig, ax1 = plt.subplots(figsize=(10, 6))\n",
-    "\n",
-    "# Left axis: number of respondentS\n",
-=======
     "# Reindex the counts and avg_age to follow the custom order\n",
     "counts = counts.reindex(category_order)\n",
     "avg_age = avg_age.reindex(category_order)\n",
@@ -524,7 +467,6 @@
     "fig, ax1 = plt.subplots(figsize=(10, 6))\n",
     "\n",
     "# ----- Left axis: number of respondents -----\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "ax1.plot(\n",
     "    category_order, \n",
     "    counts, \n",
@@ -536,11 +478,7 @@
     "ax1.set_ylabel(\"Number of Respondents\", color=\"blue\")\n",
     "ax1.tick_params(axis=\"y\", labelcolor=\"blue\")\n",
     "\n",
-<<<<<<< HEAD
-    "#  Right axis: average age \n",
-=======
     "# ----- Right axis: average age -----\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "ax2 = ax1.twinx()\n",
     "ax2.plot(\n",
     "    category_order, \n",
@@ -585,19 +523,6 @@
    "source": [
     "\n",
     "\n",
-<<<<<<< HEAD
-    "\n",
-    "romantic_counts = df[\"romanticize_or_sad[]\"][df[\"romanticize_or_sad[]\"] != \"N/A\"].value_counts()\n",
-    "\n",
-    "\n",
-    "labels = romantic_counts.index\n",
-    "values = romantic_counts.values\n",
-    "\n",
-    "# the figure and axes\n",
-    "fig, ax = plt.subplots(figsize=(8, 8))\n",
-    "\n",
-    "#donut chart \n",
-=======
     "# Your existing count data:\n",
     "romantic_counts = df[\"romanticize_or_sad[]\"][df[\"romanticize_or_sad[]\"] != \"N/A\"].value_counts()\n",
     "\n",
@@ -609,7 +534,6 @@
     "fig, ax = plt.subplots(figsize=(8, 8))\n",
     "\n",
     "# Plot a donut chart (pie with a hole in the center)\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "wedges, texts, autotexts = ax.pie(\n",
     "    values,\n",
     "    labels=None,          # We'll handle legend externally\n",
@@ -619,16 +543,6 @@
     "    wedgeprops={'edgecolor': 'white'}  # White edge for a cleaner look\n",
     ")\n",
     "\n",
-<<<<<<< HEAD
-    "\n",
-    "center_circle = plt.Circle((0, 0), 0.60, fc='white')\n",
-    "ax.add_artist(center_circle)\n",
-    "\n",
-    "# title\n",
-    "ax.set_title(\"Do you romanticize the past?\", fontsize=14)\n",
-    "\n",
-    "# legend to the right of the donut\n",
-=======
     "# Create a circle at the center to make it donut-shaped\n",
     "center_circle = plt.Circle((0, 0), 0.60, fc='white')\n",
     "ax.add_artist(center_circle)\n",
@@ -637,7 +551,6 @@
     "ax.set_title(\"Do you romanticize the past?\", fontsize=14)\n",
     "\n",
     "# Place a legend to the right of the donut\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "ax.legend(\n",
     "    wedges,\n",
     "    labels,\n",
@@ -668,11 +581,7 @@
     }
    ],
    "source": [
-<<<<<<< HEAD
-    "# Bar Chart -----\n",
-=======
     "# ----- Chart 3: Impressionist Feelings Distribution Bar Chart -----\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "feelings_counts = df[\"impressionist_feelings[]\"][df[\"impressionist_feelings[]\"] != \"N/A\"].value_counts()\n",
     "plt.figure(figsize=(10, 6))\n",
     "feelings_counts.plot(kind=\"bar\", color=\"lightgreen\", edgecolor=\"black\")\n",
@@ -705,21 +614,6 @@
     "import matplotlib.pyplot as plt\n",
     "import pandas as pd\n",
     "\n",
-<<<<<<< HEAD
-    "\n",
-    "art_list = []\n",
-    "for response in df[\"art_consumption[]\"]:\n",
-    "    if response != \"N/A\":  # ignore missing entries\n",
-    "    \n",
-    "        items = [item.strip() for item in response.split(\",\")]\n",
-    "        art_list.extend(items)\n",
-    "        \n",
-    "#frequency Series for art consumption \n",
-    "art_counts = pd.Series(art_list).value_counts()\n",
-    "\n",
-    "# Process Cultural Attachment \n",
-    "\n",
-=======
     "# ----- Process Art Consumption -----\n",
     "# Split each art consumption response by comma and strip extra spaces.\n",
     "art_list = []\n",
@@ -734,20 +628,10 @@
     "\n",
     "# ----- Process Cultural Attachment -----\n",
     "# Define a function to classify cultural attachment responses into simplified categories.\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "def classify_ca(resp):\n",
     "    if pd.isnull(resp) or resp == \"N/A\":\n",
     "        return \"N/A\"\n",
     "    lower = resp.lower()\n",
-<<<<<<< HEAD
-    "\n",
-    "    if \"yes\" in lower:\n",
-    "        return \"Yes\"\n",
-    "   \n",
-    "    elif \"no\" in lower:\n",
-    "        return \"No\"\n",
-    "\n",
-=======
     "    # If the response includes \"yes\" we classify as \"Yes\"\n",
     "    if \"yes\" in lower:\n",
     "        return \"Yes\"\n",
@@ -755,28 +639,11 @@
     "    elif \"no\" in lower:\n",
     "        return \"No\"\n",
     "    # If the response includes \"maybe\"\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "    elif \"maybe\" in lower:\n",
     "        return \"Maybe\"\n",
     "    else:\n",
     "        return \"Other\"\n",
     "\n",
-<<<<<<< HEAD
-    "\n",
-    "ca_classified = df[\"cultural_attachment[]\"].apply(classify_ca)\n",
-    "ca_counts = ca_classified.value_counts()\n",
-    "\n",
-    "# Plotting Side-by-Side \n",
-    "fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(14, 6))\n",
-    "\n",
-    "\n",
-    "axes[0].barh(art_counts.index, art_counts.values, color=\"skyblue\")\n",
-    "axes[0].set_title(\"Art Consumption Frequencies\")\n",
-    "axes[0].set_xlabel(\"Count\")\n",
-    "axes[0].invert_yaxis()\n",
-    "\n",
-    "\n",
-=======
     "# Apply the classification function to the cultural attachment responses.\n",
     "ca_classified = df[\"cultural_attachment[]\"].apply(classify_ca)\n",
     "ca_counts = ca_classified.value_counts()\n",
@@ -791,7 +658,6 @@
     "axes[0].invert_yaxis()  # highest values on top\n",
     "\n",
     "# Right chart: Cultural Attachment Simplified (Vertical Bar Chart)\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "axes[1].bar(ca_counts.index, ca_counts.values, color=\"salmon\", edgecolor=\"black\")\n",
     "axes[1].set_title(\" Attachment to the culture from their childhood\")\n",
     "axes[1].set_xlabel(\"Response\")\n",
@@ -857,17 +723,6 @@
     "    \"Colours and composition\"\n",
     "]\n",
     "\n",
-<<<<<<< HEAD
-    "\n",
-    "visual_series = pd.Series(visual_elements)\n",
-    "visual_counts = visual_series.value_counts()\n",
-    "\n",
-    "\n",
-    "cmap = plt.cm.get_cmap('tab20', len(visual_counts))\n",
-    "colors = [cmap(i) for i in range(len(visual_counts))]\n",
-    "\n",
-    "\n",
-=======
     "# Create a pandas Series and count frequency for each response.\n",
     "visual_series = pd.Series(visual_elements)\n",
     "visual_counts = visual_series.value_counts()\n",
@@ -877,7 +732,6 @@
     "colors = [cmap(i) for i in range(len(visual_counts))]\n",
     "\n",
     "# Create the pie chart (as a donut chart for a neater look)\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "plt.figure(figsize=(10, 10))\n",
     "patches, texts, autotexts = plt.pie(\n",
     "    visual_counts,\n",
@@ -889,22 +743,14 @@
     "    wedgeprops={'edgecolor': 'white'}\n",
     ")\n",
     "\n",
-<<<<<<< HEAD
-    "\n",
-=======
     "# Add a white circle in the center to achieve a donut effect\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "centre_circle = plt.Circle((0, 0), 0.70, fc='white')\n",
     "plt.gca().add_artist(centre_circle)\n",
     "\n",
     "# Set title\n",
     "plt.title(\"Distribution of Visual Elements Responses\", fontsize=16)\n",
     "\n",
-<<<<<<< HEAD
-    "#  external legend using the patches\n",
-=======
     "# Create an external legend using the patches (color handles) and the labels from visual_counts.index.\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "plt.legend(\n",
     "    patches,\n",
     "    visual_counts.index,\n",
@@ -913,11 +759,7 @@
     "    bbox_to_anchor=(1, 0.5)\n",
     ")\n",
     "\n",
-<<<<<<< HEAD
-    "plt.axis('equal')  \n",
-=======
     "plt.axis('equal')  # Ensures the pie is drawn as a circle.\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "plt.tight_layout()\n",
     "plt.show()\n",
     "\n"
@@ -945,11 +787,7 @@
     "from wordcloud import WordCloud\n",
     "import pandas as pd\n",
     "\n",
-<<<<<<< HEAD
-    "# project_imagery_reminder list\n",
-=======
     "# Your project_imagery_reminder list\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "project_imagery_reminder = [\n",
     "    \"Internet\", \n",
     "    \"It makes me want to be a kid again\", \n",
@@ -978,13 +816,8 @@
     "# Combine all responses into a single text block.\n",
     "text = \" \".join(project_imagery_reminder)\n",
     "\n",
-<<<<<<< HEAD
-    "\n",
-    "\n",
-=======
     "# Optionally, you can remove common stopwords manually if needed.\n",
     "# For simplicity, we're using the default stopwords of WordCloud.\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "wordcloud = WordCloud(width=800, height=400, background_color=\"white\").generate(text)\n",
     "\n",
     "# Display the word cloud.\n",
@@ -1017,11 +850,7 @@
     "import matplotlib.pyplot as plt\n",
     "import pandas as pd\n",
     "\n",
-<<<<<<< HEAD
-    "# dollhouse_response data\n",
-=======
     "# Your dollhouse_response data\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "dollhouse_response = [\n",
     "    \"Longing\", \"Longing\", \"Neither\", \"Neither\", \"Familiarity\", \"Familiarity\", \"Familiarity\",\n",
     "    \"Familiarity\", \"Familiarity\", \"Familiarity\", \"Familiarity\", \"Longing\", \"Neither\", \"Familiarity\",\n",
@@ -1029,11 +858,7 @@
     "    \"Longing\", \"Familiarity\", \"Familiarity\", \"Neither\", \"Familiarity\", \"Both\", \"Familiarity\", \"Familiarity\"\n",
     "]\n",
     "\n",
-<<<<<<< HEAD
-    "#  list into a pandas Series and count frequency of each response\n",
-=======
     "# Convert list into a pandas Series and count frequency of each response\n",
->>>>>>> 8447dc9754c616eb29270d3dc23ce327d94364eb
     "df_doll = pd.Series(dollhouse_response)\n",
     "response_counts = df_doll.value_counts()\n",
     "\n",
