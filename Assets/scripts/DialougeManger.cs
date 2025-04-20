@@ -1,103 +1,113 @@
 using System;
 using UnityEngine;
 using TMPro;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Samples.SpatialKeyboard;
 
 public class DialogueManager : MonoBehaviour
 {
     [Header("XR Keyboard")]
-    [Tooltip("Drag in your XRKeyboard here.")]
-    [SerializeField] private XRKeyboard xrKeyboard;
+    [Tooltip("Drag in the XRGrabInteractable on your Spatial Keyboard prefab.")]
+    [SerializeField] XRGrabInteractable keyboardGrabInteractable;
 
-    [Header("AI Chat (Hugging Face)")]
-    [Tooltip("Component that actually calls HF and returns you a string.")]
-    [SerializeField] private HFChatResponder hfResponder;
+    [Tooltip("Drag in the XRKeyboardDisplay on your Spatial Keyboard prefab.")]
+    [SerializeField] XRKeyboardDisplay keyboardDisplay;
+
+    [Header("AI Chat (Hugging Face)")]
+    [SerializeField] HFChatResponder hfResponder;
 
     [Header("Emotion Detection")]
-    [Tooltip("Component that calls your text→emotion API.")]
-    [SerializeField] private EmotionDetectionAPI emotionDetector;
+    [SerializeField] EmotionDetectionAPI emotionDetector;
 
     [Header("UI")]
-    [SerializeField] private TextMeshProUGUI speakerText;
-    [SerializeField] private TextMeshProUGUI dialogueText;
+    [SerializeField] TextMeshProUGUI speakerText;
+    [SerializeField] TextMeshProUGUI dialogueText;
 
     private void OnEnable()
     {
-        if (xrKeyboard != null)
-            xrKeyboard.onTextSubmitted.AddListener(OnKeyboardTextSubmitted);
+        if (keyboardDisplay != null)
+            keyboardDisplay.onTextSubmitted.AddListener(OnKeyboardTextSubmitted);
     }
 
     private void OnDisable()
     {
-        if (xrKeyboard != null)
-            xrKeyboard.onTextSubmitted.RemoveListener(OnKeyboardTextSubmitted);
+        if (keyboardDisplay != null)
+            keyboardDisplay.onTextSubmitted.RemoveListener(OnKeyboardTextSubmitted);
     }
 
     private void Start()
     {
-        // Kick things off with a friendly opener
+        // Initial prompt
         speakerText.text  = "Friend";
         dialogueText.text = "hii—don't you miss the Bieber swag era? :P";
 
-        // Make sure keyboard is enabled
-        if (xrKeyboard != null)
-            xrKeyboard.interactable = true;
+        // Ensure the keyboard can be grabbed/used
+        if (keyboardGrabInteractable != null)
+            keyboardGrabInteractable.enabled = true;
     }
 
-    private void OnKeyboardTextSubmitted(KeyboardTextEventArgs args)
+    private void OnKeyboardTextSubmitted(string submittedText)
     {
-        string userLine = args.keyboardText?.Trim();
+        var userLine = submittedText?.Trim();
         if (string.IsNullOrEmpty(userLine))
             return;
 
-        // 1) Echo the user line:
+        // 1) Echo the user
         speakerText.text  = "You";
         dialogueText.text = userLine;
 
-        // 2) Clear & disable the keyboard until AI replies:
-        xrKeyboard.text         = "";      // reset the field
-        xrKeyboard.interactable = false;
+        // 2) Clear the input field
+        if (keyboardDisplay?.inputField != null)
+            keyboardDisplay.inputField.text = "";
 
-        // 3) Fire off emotion detection in parallel (optional):
-        if (emotionDetector != null)
-        {
-            emotionDetector.DetectEmotion(
-                userLine,
-                onSuccess: emo => Debug.Log("[Emotion] " + emo),
-                onError:   err => Debug.LogError("[Emotion] " + err)
-            );
-        }
+        // 3) Disable the keyboard until AI replies
+        if (keyboardGrabInteractable != null)
+            keyboardGrabInteractable.enabled = false;
 
-        // 4) Show a “typing” indicator while HF works:
+        // 4) (Optional) Emotion detection
+        emotionDetector?.DetectEmotion(
+            userLine,
+            emo => Debug.Log("[Emotion] " + emo),
+            err => Debug.LogError("[Emotion] " + err)
+        );
+
+        // 5) Show “typing…” indicator
         speakerText.text  = "Friend";
         dialogueText.text = "…typing…";
 
-        // 5) Send to HF, and when it replies, show it & re‑enable keyboard:
+        // 6) Send to HF with two‑arg overload and catch exceptions
         if (hfResponder != null)
         {
-            hfResponder.SendUserLine(
-                userLine,
-                onSuccess: friendReply =>
-                {
-                    speakerText.text  = "Friend";
-                    dialogueText.text = friendReply;
-                    xrKeyboard.interactable = true;
-                },
-                onError: hfError =>
-                {
-                    speakerText.text  = "System";
-                    dialogueText.text = $"[AI error] {hfError}";
-                    xrKeyboard.interactable = true;
-                }
-            );
+            try
+            {
+                hfResponder.SendUserLine(
+                    userLine,
+                    friendReply =>
+                    {
+                        speakerText.text  = "Friend";
+                        dialogueText.text = friendReply;
+                        if (keyboardGrabInteractable != null)
+                            keyboardGrabInteractable.enabled = true;
+                    }
+                );
+            }
+            catch (Exception e)
+            {
+                speakerText.text  = "System";
+                dialogueText.text = $"[AI error] {e.Message}";
+                if (keyboardGrabInteractable != null)
+                    keyboardGrabInteractable.enabled = true;
+            }
         }
         else
         {
-            // Fallback if no HF component attached:
+            // No responder attached
             speakerText.text  = "System";
             dialogueText.text = "[No HF responder attached]";
-            xrKeyboard.interactable = true;
+            if (keyboardGrabInteractable != null)
+                keyboardGrabInteractable.enabled = true;
         }
     }
 }
+
 
