@@ -1,0 +1,523 @@
+fileFormatVersion: 2
+guid: 2cefc855ecebf4be7b7ba4a573c166d5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1206
+        width: 378
+        height: 594
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aae9d5a646684c4184edae6bd36c386
+      internalID: -1476911515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1203
+        width: 394
+        height: 597
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a6431c3a89a466eb6f321e00ca8775
+      internalID: 1237791065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_2
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 1206
+        width: 381
+        height: 594
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6a3005cc0bb3445f89c511280018bea
+      internalID: -2028232655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_3
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1208
+        width: 388
+        height: 592
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d4edcfa082e4f5b8154d053541600b
+      internalID: 704658611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_4
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 1198
+        width: 396
+        height: 602
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f81393ad8ff43a489f4f2e294160d0
+      internalID: 1635116422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 602
+        width: 384
+        height: 596
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c16d1240a09a450a9327f191e086287
+      internalID: 1600807273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 613
+        width: 393
+        height: 596
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4f435b88d2f43e78fcee8f9af04441
+      internalID: -1152674179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_7
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 597
+        width: 388
+        height: 591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c955dc3242e494777800511ba30198e7
+      internalID: 1207314777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_8
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 612
+        width: 455
+        height: 586
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 42, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3390a98341b5d411ea8499dcd52994fb
+      internalID: 1924854440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_9
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 602
+        width: 353
+        height: 563
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5c374479242444b8af0e1177d794905
+      internalID: 2139372239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 384
+        height: 589
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334d544e15c654e36aad276ed4f05123
+      internalID: -2078969787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_11
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 0
+        width: 396
+        height: 579
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2603cbe24810748fd9b8a89cb60822cf
+      internalID: 1487066964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_12
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 0
+        width: 391
+        height: 597
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e16806c786ef54f66a4c622ad191b7b2
+      internalID: 1866500845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1215
+        width: 380
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f101163c5ec7b467080eb4597193c0a6
+      internalID: -1088280591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_14
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 610
+        width: 392
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4895e8d9d0efc431db4c75afdff677ab
+      internalID: 2086168197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_15
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 1205
+        width: 391
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc03bd2996f3e495cb0344d863a71246
+      internalID: 611091868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_16
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1205
+        width: 381
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b2c25a8af7b4742919e8171a02cacd
+      internalID: 784328030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ces petits riens - Sonia Menti_17
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 21
+        width: 393
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3f7ad82d14c4af982d6b36f1272054
+      internalID: 32794157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 82f212fc0c32a4bd5a5a5db5591af665
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ces petits riens - Sonia Menti_0: -1476911515
+      Ces petits riens - Sonia Menti_1: 1237791065
+      Ces petits riens - Sonia Menti_10: -2078969787
+      Ces petits riens - Sonia Menti_11: 1487066964
+      Ces petits riens - Sonia Menti_12: 1866500845
+      Ces petits riens - Sonia Menti_13: -1088280591
+      Ces petits riens - Sonia Menti_14: 2086168197
+      Ces petits riens - Sonia Menti_15: 611091868
+      Ces petits riens - Sonia Menti_16: 784328030
+      Ces petits riens - Sonia Menti_17: 32794157
+      Ces petits riens - Sonia Menti_2: -2028232655
+      Ces petits riens - Sonia Menti_3: 704658611
+      Ces petits riens - Sonia Menti_4: 1635116422
+      Ces petits riens - Sonia Menti_5: 1600807273
+      Ces petits riens - Sonia Menti_6: -1152674179
+      Ces petits riens - Sonia Menti_7: 1207314777
+      Ces petits riens - Sonia Menti_8: 1924854440
+      Ces petits riens - Sonia Menti_9: 2139372239
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
